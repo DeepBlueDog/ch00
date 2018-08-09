@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title>CSS3 vertical multicolor menu | Script Tutorials</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <link href="../css/layout1.css" rel="stylesheet" type="text/css" />
+    <link href="../css/menu1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function changeSrc(flag) {
+            if(flag === 'homepage') {
+                window.parent.document.getElementById("rightframe").src = "./book/right.html";
+            }else if(flag === 'luru') {
+                window.parent.document.getElementById("rightframe").src = "./book/book_include.html";
+            }else if(flag === 'search'){
+                window.parent.document.getElementById("rightframe").src = "./book/book_search.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <span id="clr1"></span>
+        <span id="clr2"></span>
+        <span id="clr3"></span>
+        <span id="clr4"></span>
+        <span id="clr5"></span>
+        <span id="clr6"></span>
+
+
+        <div class="colorScheme">
+            <a href="#clr1" class="clr1"></a>
+            <a href="#clr2" class="clr2"></a>
+            <a href="#clr3" class="clr3"></a>
+            <a href="#clr4" class="clr4"></a>
+            <a href="#clr5" class="clr5"></a>
+            <a href="#clr6" class="clr6"></a>
+        </div>
+
+        <ul id="nav">
+            <li><a href="#" id="a1" onclick="changeSrc('homepage')">管理首页</a></li>
+            <li><a href="#" id="a2" onclick="changeSrc('luru')">图书录入</a></li>
+            <li><a href="#" id="a3" onclick="changeSrc('search')">图书查询</a></li>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#">Menu 4</a></li>
+            <li><a href="#">Menu 5</a></li>
+            <li><a href="#">Menu 6</a></li>
+            <li><a href="#">Back</a></li>
+        </ul>
+
+    </div>
+</body>
+</html>

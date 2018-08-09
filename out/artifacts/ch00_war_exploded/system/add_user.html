@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        #handler{
+            position:absolute;
+            width:250px;
+            height:350px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+            background-color: #ABABAB;
+        }
+        #tab{
+            position:absolute;
+            top:80px;
+        }
+    </style>
+</head>
+<body>
+<div id="handler">
+    <h1 style="font-family: 楷体,serif; position:absolute; margin-left:60px;">添加账户</h1>
+    <form method="POST">
+        <table id="tab">
+            <tr>
+                <td><label for="name">户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label><input type="text" id="name" name="name"/></td>
+            </tr>
+            <tr>
+                <td><label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="text" id="password" /></td>
+            </tr>
+            <tr>
+                <td><label for="confirm">确认密码：</label><input type="text" id="confirm" name="confirm"/></td>
+            </tr>
+            <tr >
+                <td style="text-align: center;"><input type="button" value="确&nbsp;&nbsp;&nbsp;&nbsp;认" style="margin-top: 20px; margin-right:20px;"/><input type="reset" value="重&nbsp;&nbsp;&nbsp;&nbsp;置" style="margin-top: 20px; margin-left:20px;"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

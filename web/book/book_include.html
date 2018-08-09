@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书录入</title>
+    <script type="text/javascript" src="../js/AjaxRequest.js"></script>
+    <script type="text/javascript" src="../js/bookcheck.js"></script>
+    <style type="text/css">
+        #handler{
+            position:absolute;
+            width:450px;
+            height:500px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+            background-color: #ABABAB;
+        }
+        #tab{
+            position:absolute;
+            top:80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="handler">
+        <h1 style="font-family: 楷体,serif; position:absolute; margin-left:150px;">图书录入</h1>
+        <form method="POST">
+            <table id="tab">
+                <tr>
+                    <td><label for="bookname">书&nbsp;&nbsp;&nbsp;&nbsp;名：</label><input type="text" id="bookname" name="bookname"/></td>
+                </tr>
+                <tr>
+                    <td><label for="booknumber">书&nbsp;&nbsp;&nbsp;&nbsp;号：</label><input type="text" id="booknumber" name="booknumber"></td>
+                </tr>
+                <tr>
+                    <td><label for="author1">作&nbsp;&nbsp;&nbsp;&nbsp;者：</label><input type="text" id="author1" placeholder="作者一"/><input type="text" id="author2" placeholder="作者二"/></td>
+                </tr>
+                <tr>
+                    <td><label for="translator1">译&nbsp;&nbsp;&nbsp;&nbsp;者：</label><input type="text" id="translator1" name="translator" placeholder="译者一"/><input type="text" id="translator2" placeholder="译者二"/></td>
+                </tr>
+                <tr>
+                    <td><label for="publishor">出版社：</label><input type="text" id="publishor" name="publishor"/></td>
+                </tr>
+                <tr>
+                    <td><label for="language">语&nbsp;&nbsp;&nbsp;&nbsp;言：</label><input type="text" id="language" name="language"/></td>
+                </tr>
+                <tr>
+                    <td><label for="price">定&nbsp;&nbsp;&nbsp;&nbsp;价：</label><input type="text" id="price" placeholder="单位：元"/></td>
+                </tr>
+                <tr>
+                    <td><label for="quantity">数&nbsp;&nbsp;&nbsp;&nbsp;量：</label><input type="text" id="quantity" placeholder="单位：本"/></td>
+                </tr>
+                <tr>
+                    <td><label for="abstractText">内容简介：</label><br><textarea name="abstractText" id="abstractText" rows="5" cols="40"></textarea></td>
+                </tr>
+                <tr >
+                    <td style="text-align: center;"><input type="button" value="确认录入" style="margin-top: 20px; margin-right:20px;" onclick="bookcheck()"/><input type="reset" value="重&nbsp;&nbsp;&nbsp;&nbsp;置" style="margin-top: 20px; margin-left:20px;"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

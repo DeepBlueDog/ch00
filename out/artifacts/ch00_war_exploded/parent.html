@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <script type="text/javascript">
+            window.onload = function(){
+                document.getElementsByName("myFrame").onload = function() {
+                    alert("myFrame is loaded");
+                };
+            };
+            function say(){
+                alert("parent.html");
+            }
+            function callChild(){
+
+                myFrame.window.say();
+                myFrame.window.document.getElementById("button").value="调用结束";
+
+            }
+
+        </script>
+</head>
+<body>
+    <input id="button" type="button" value="调用child.html中的函数say()" onclick="callChild()"/>
+    <iframe id="myFrame" src="child.html"></iframe>
+    <script>
+        document.getElementById("myFrame").onload = function() {
+            alert("myframe is loaded");
+        };
+    </script>
+</body>
+</html>

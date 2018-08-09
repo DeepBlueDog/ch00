@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function changeSrc()
+        {
+            document.getElementById("myframe").src="https://www.baidu.com/";
+        }
+    </script>
+</head>
+<body>
+<iframe id="myframe" src="b.html">
+    <p>Your browser does not support iframes.</p>
+</iframe>
+<br><br>
+<input type="button" onclick="changeSrc()" value="Change Source">
+</body>
+</html>

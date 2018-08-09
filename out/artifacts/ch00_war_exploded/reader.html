@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>读者管理</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        html body{
+            margin:0 auto;
+            padding:0px;
+            background-color: #ABABAB;
+        }
+
+        #left{
+            float: left;
+            width:25%;
+            height:100%;
+            background-color: #88AAAA;
+            border-radius: 30px 0px 0px 30px;
+            margin:0;
+        }
+        #right{
+            float: right;
+            width: 74.8%;
+            height:100%;
+            margin:0;
+            background-color: #ABABAB;
+            /* border: 1px solid black;*/
+            border-radius: 0px 30px 30px 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="left">
+        <iframe id="iframepage" name="leftiframe" width="100%" src="./reader/left.html" onload="changeFrameHeight()" scrolling="no" frameborder="0" >
+            <p>您的浏览器不支持  iframe 标签。</p>
+        </iframe>
+
+    </div>
+    <div id="right">
+        <iframe id="rightframe" width="100%" src="./reader/right.html" onload="changeFrameHeight()" scrolling="no" frameborder="0">
+            <p>您的浏览器不支持  iframe 标签。</p>
+        </iframe>
+    </div>
+<script type="text/javascript">
+    function changeFrameHeight(){
+        var ifm= document.getElementById("iframepage");
+        var rfm = document.getElementById("rightframe");
+        ifm.height=document.documentElement.clientHeight/1.5;
+        rfm.height=document.documentElement.clientHeight/1.5;
+    }
+    /*$(function(){
+        $("#iframepage").on("load", function(event){
+            $("#a1",this.contentDocument).click(function(){
+                alert( window.location.pathname);
+            });
+        });
+    });*/
+    window.onresize=function(){
+        changeFrameHeight();
+    }
+</script>
+</body>
+</html>

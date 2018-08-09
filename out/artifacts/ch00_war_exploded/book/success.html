@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #handler{
+            position:absolute;
+            width:450px;
+            height:200px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+            background-color: #ABABAB;
+        }
+    </style>
+</head>
+<body>
+    <div id="handler">
+        <h1 style="font-family: 楷体,serif; position:absolute; margin-left:30px;margin-bottom: 20px;">插入成功，<span id="totalSecond">5</span>秒后返回录入页面....</h1>
+        <script type="text/javascript">
+            var second = document.getElementById('totalSecond').textContent;
+            if(navigator.appName.indexOf("Explorer") > -1) {
+                second = document.getElementById('totalSecond').innerText;
+            } else {
+                second = document.getElementById('totalSecond').textContent;
+            }
+
+            setInterval("redirect()", 1000);
+            function redirect() {
+                if(second < 0) {
+                    location.href = "book_include.html";
+                }else {
+                    if (navigator.appName.indexOf("Explorer") > -1) {
+                        document.getElementById('totalSecond').innerText = second--;
+                    } else {
+                        document.getElementById('totalSecond').textContent = second--;
+                    }
+                }
+            }
+        </script>
+        <br><br><br><br>
+        <a href="./book_include.html" style="text-decoration:none;"><h1 style="font-family: 楷体,serif; position:relative; margin-left:30px;">点此立即返回</h1></a>
+    </div>
+
+</body>
+</html>

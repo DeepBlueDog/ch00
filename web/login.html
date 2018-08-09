@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel='stylesheet prefetch' href='./css/bootstrap.min.css' type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script type="text/javascript" src="js/AjaxRequest.js"></script>
+    <script type="text/javascript" src="js/formcheck.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <form class="form-signin" method="post" id="form">
+        <h2 class="form-signin-heading">请登录</h2>
+        <input type="text" class="form-control" name="username" id="userid" placeholder="账 号" />
+        <input type="password" class="form-control" name="password" id="userpwd" placeholder="密 码" />
+        <!--输出错误提示-->
+        <span id="errMsg" style="width:330px;height:30px;color:red;font-weight:bold;text-align: center"></span>
+        <p>忘记账号或密码？请登录其他账号修改！</p>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="formcheck()">登 录</button>
+    </form>
+</div>
+</body>
+
+</html>
