@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/bobby/loansystem/admin/Action/LoginServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/bobby/loansystem/book/Action/BookSearchServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/bobby/loansystem/book/Action/BooksServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/js/bookcheck.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/js/formcheck.js" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>
